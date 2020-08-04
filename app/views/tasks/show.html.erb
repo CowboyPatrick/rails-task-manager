@@ -2,6 +2,6 @@
 
 <div><%= @task.details %></div>
 
- <%= link_to 'EDIT', edit_path %>
- <%= link_to 'DELETE', tasks_path(@task), method: :delete, data: { confirm: 'Are you sure?' }  %>
+ <%= link_to 'EDIT', edit_path(@task) %>
+ <%= link_to 'DELETE', task_path(@task), method: :delete, data: { confirm: 'Are you sure?' }  %>
 <%= link_to 'HOME', tasks_path %>

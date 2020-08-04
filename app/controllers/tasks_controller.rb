@@ -40,7 +40,12 @@ class TasksController < ApplicationController
     redirect_to tasks_path
   end
 
-  private
+  def toggle
+    @task = Task.find(params[:id])
+    @task.completed = !@task.completed
+    @task.save
+    redirect_to tasks_path
+  end
 
   def task_params
     params.require(:task).permit(:title, :details)
