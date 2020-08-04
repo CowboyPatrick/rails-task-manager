@@ -1,0 +1,6 @@
+ <!-- index.html.erb -->
+<h1>MY TASKS</h1>
+
+  <% @tasks.each do |task| %>
+  <h2><%= link_to task.title, task_path(task)  %></h2>
+  <% end %>
